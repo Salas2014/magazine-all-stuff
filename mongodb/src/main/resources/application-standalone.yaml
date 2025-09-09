@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: mongodb-service
+  data:
+    mongodb:
+      username: salas
+      password: password
+      host: localhost
+      port: 27017
+      database: magazinecoding
+      authentication-database: admin
+
+server:
+  port: 8180
