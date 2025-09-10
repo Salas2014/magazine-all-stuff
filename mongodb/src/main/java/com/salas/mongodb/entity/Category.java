@@ -1,4 +1,4 @@
-package com.salas.mongodb.product;
+package com.salas.mongodb.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -8,12 +8,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
 @Data
-@AllArgsConstructor
 @Builder
-public class Product {
-
+@AllArgsConstructor
+public class Category {
     @Id
     private String id;
     private String name;
     private String description;
+
 }

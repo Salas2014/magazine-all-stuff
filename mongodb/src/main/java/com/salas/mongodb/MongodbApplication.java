@@ -1,11 +1,14 @@
 package com.salas.mongodb;
 
-import com.salas.mongodb.product.Product;
-import com.salas.mongodb.repo.ProductRepository;
+import com.salas.mongodb.entity.Category;
+import com.salas.mongodb.repo.CategoryRepo;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
+
+import java.util.List;
 
 @SpringBootApplication
 public class MongodbApplication {
@@ -15,14 +18,18 @@ public class MongodbApplication {
     }
 
     @Bean
-    public CommandLineRunner commandLineRunner(ProductRepository productRepository) {
+    public CommandLineRunner commandLineRunner(CategoryRepo categoryRepo) {
         return args -> {
-            Product product = Product.builder()
-                    .name("iphone")
-                    .description("good")
+            Category phone = Category.builder()
+                    .name("Phone")
+                    .description("some description")
                     .build();
-            productRepository.insert(product);
+            Category car = Category.builder()
+                    .description("some description-2")
+                    .name("Car")
+                    .build();
+
+          categoryRepo.saveAll(List.of(phone, car));
         };
     }
-
 }
