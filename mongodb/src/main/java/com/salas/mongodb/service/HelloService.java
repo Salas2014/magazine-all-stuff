@@ -12,7 +12,7 @@ public class HelloService extends GreeterGrpc.GreeterImplBase {
     public void sayHello(HelloWorldProto.HelloRequest request,
                          StreamObserver<HelloWorldProto.HelloReply> responseObserver) {
 
-        String message = "Hello " + request.getName() + " " + request.getLastName() + "!";
+        String message = "Hello " + request.getName() + " " + request.getLastName() + "! was modifier by server";
         HelloWorldProto.HelloReply reply = HelloWorldProto.HelloReply
                 .newBuilder()
                 .setMessage(message).build();
