@@ -42,16 +42,21 @@ public class ProductController {
     }
 
    private static ProductDto convert(Product product) {
-        return ProductDto.builder()
+       ProductDto.ProductDtoBuilder builder = ProductDto.builder();
+
+       if (product.getCategory() != null) {
+           builder.category(CategoryDto.builder()
+                   .id(product.getCategory().getId())
+                   .name(product.getCategory().getName())
+                   .description(product.getCategory().getDescription())
+                   .build());
+       }
+
+        return builder
                 .id(product.getId())
                 .name(product.getName())
                 .description(product.getDescription())
                 .tags(product.getTags())
-                .category(CategoryDto.builder()
-                        .id(product.getCategory().getId())
-                        .name(product.getCategory().getName())
-                        .description(product.getCategory().getDescription())
-                        .build())
                 .build();
     }
 }
