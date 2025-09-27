@@ -1,4 +1,6 @@
 spring:
+  config:
+    import: 'consul:'
   application:
     name: producer-service
 
@@ -7,10 +9,13 @@ spring:
       port: 8500
       host: localhost
       discovery:
-        hostname: host.docker.internal # ??? ????? ????? Docker ? ??????
+        hostname: host.docker.internal
         instance-id: producer-service
         acl-token: 45cb0de0-6d6c-6545-477c-08f2e6d529cb
-        register: true
+      config:
+        data-key: data
+        format: yaml
+        acl-token: 45cb0de0-6d6c-6545-477c-08f2e6d529cb
 
 
 management:
@@ -22,3 +27,5 @@ management:
           - prometheus
           - metrics
           - info
+server:
+  port: 8182
