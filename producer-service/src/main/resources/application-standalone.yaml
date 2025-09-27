@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: producer-service
+
+  cloud:
+    consul:
+      port: 8500
+      host: localhost
+      discovery:
+        hostname: host.docker.internal # ??? ????? ????? Docker ? ??????
+        instance-id: producer-service
+        acl-token: 45cb0de0-6d6c-6545-477c-08f2e6d529cb
+        register: true
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - health
+          - prometheus
+          - metrics
+          - info

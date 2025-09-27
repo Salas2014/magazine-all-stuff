@@ -29,6 +29,27 @@ services:
     networks:
       - mongo-net
 
+
+  consul:
+    image: consul:1.15.4
+    container_name: consul-server-1
+    ports:
+      - "8500:8500"     # Web UI и HTTP API
+      - "8600:8600/udp" # DNS (опционально)
+    volumes:
+      - ./tmp/consul/salas_project_consul_data:/consul/data
+      - ./tmp/consul/config:/consul/config
+    command:
+      - agent
+      - -server
+      - -ui
+      - -client=0.0.0.0
+      - -data-dir=/consul/data
+      - -bootstrap-expect=1
+      - -config-file=/consul/config/agent.json
+    networks:
+      - mongo-net
+
 volumes:
   mongo: {}
 

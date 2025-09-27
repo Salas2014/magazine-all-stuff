@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bb3c1e04-6164-4f1a-bec2-9b7e44e4032d" name="Changes" comment="[mongo-db]: drop redundant gradle file">
+      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer-service/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer-service/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer-service/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer-service/src/main/java/com/salas/producers/ervice/ProducerServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer-service/src/main/resources/application-standalone.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer-service/src/test/java/com/salas/producers/ervice/ProducerServiceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/consul/config/agent.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/home-work-project.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongodb/README.DM" beforeDir="false" afterPath="$PROJECT_DIR$/mongodb/README.DM" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongodb/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mongodb/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="module" />
+      <option value="repository" />
+    </option>
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/grpc-client">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/grpc-client">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="grpc-client" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="grpc-client" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+        <option value="Dockerfile" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HttpClientOnboardingState">{
+  &quot;isOnboardingCommentShown&quot;: true
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="32ThYo7ZpufJgvFD7mM4mBgVLxt" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "HTTP Request.rest-api_7 | #1.executor": "Run",
+    "HTTP Request.rest-api_7 | #2.executor": "Run",
+    "JUnit.ProductServiceTest.executor": "Run",
+    "JUnit.ProductServiceTest.testFindById_CacheHit_ShouldNotCallRepository.executor": "Run",
+    "Maven.grpc-client [clean].executor": "Run",
+    "Maven.grpc-client [compile].executor": "Run",
+    "Maven.grpc-client [install].executor": "Run",
+    "Maven.mongodb [clean].executor": "Run",
+    "Maven.mongodb [compile].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.GrpcClientApplication.executor": "Run",
+    "Spring Boot.MongodbApplication.executor": "Run",
+    "Spring Boot.ProducerServiceApplication.executor": "Run",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/salas/Desktop/home-work-project/tmp/consul/config",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.configurations.included.in.services": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.salas.mongodb.dto" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\salas\Desktop\home-work-project\tmp\consul\config" />
+      <recent name="C:\Users\salas\Desktop\home-work-project\mongodb\src\main\resources" />
+      <recent name="C:\Users\salas\Desktop\home-work-project\grpc-client\src\main\java\com\salas\grpc\client" />
+      <recent name="C:\Users\salas\Desktop\home-work-project\grpc-client\src\main\proto" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\salas\Desktop\home-work-project\grpc-client\src\main" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.salas.mongodb.service" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+      <command value="mvn compile" />
+      <command value="mvn install" />
+    </option>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="KtorApplicationConfigurationType" />
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="configurationStatuses">
+      <map>
+        <entry key="HttpClient.HttpRequestRunConfigurationType">
+          <value>
+            <map>
+              <entry key="rest-api_7 | #1" value="STOPPED" />
+              <entry key="rest-api_7 | #2" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+        <entry key="SpringBootApplicationConfigurationType">
+          <value>
+            <map>
+              <entry key="GrpcClientApplication" value="STOPPED" />
+              <entry key="MongodbApplication" value="STOPPED" />
+              <entry key="ProducerServiceApplication" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.ProductServiceTest.testFindById_CacheHit_ShouldNotCallRepository">
+    <configuration name="rest-api_7 | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api_7.http" executionIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="rest-api_7 | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api_7.http" executionIdentifier="#2" index="2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="ProductServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mongodb" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.salas.mongodb.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.salas.mongodb.service" />
+      <option name="MAIN_CLASS_NAME" value="com.salas.mongodb.service.ProductServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductServiceTest.testFindById_CacheHit_ShouldNotCallRepository" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mongodb" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.salas.mongodb.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.salas.mongodb.service" />
+      <option name="MAIN_CLASS_NAME" value="com.salas.mongodb.service.ProductServiceTest" />
+      <option name="METHOD_NAME" value="testFindById_CacheHit_ShouldNotCallRepository" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GrpcClientApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ACTIVE_PROFILES" value="standalone" />
+      <module name="grpc-client" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.salas.grpc.client.GrpcClientApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MongodbApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ACTIVE_PROFILES" value="standalone" />
+      <module name="mongodb" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.salas.mongodb.MongodbApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProducerServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ACTIVE_PROFILES" value="standalone" />
+      <module name="producer-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.salas.producers.ervice.ProducerServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ProductServiceTest.testFindById_CacheHit_ShouldNotCallRepository" />
+        <item itemvalue="JUnit.ProductServiceTest" />
+        <item itemvalue="HTTP Request.rest-api_7 | #1" />
+        <item itemvalue="HTTP Request.rest-api_7 | #2" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.26199.169" />
+        <option value="bundled-js-predefined-d6986cc7102b-9c94529fcfe0-JavaScript-IU-252.26199.169" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="StructureViewState">
+    <option name="selectedTab" value="Logical" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bb3c1e04-6164-4f1a-bec2-9b7e44e4032d" name="Changes" comment="" />
+      <created>1757450519922</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1757450519922</updated>
+      <workItem from="1757450521093" duration="987000" />
+      <workItem from="1757525671651" duration="6202000" />
+      <workItem from="1757535258024" duration="1865000" />
+      <workItem from="1757618286810" duration="221000" />
+      <workItem from="1757618541982" duration="3998000" />
+      <workItem from="1757708851398" duration="3091000" />
+      <workItem from="1757747077313" duration="1265000" />
+      <workItem from="1758050155556" duration="4625000" />
+      <workItem from="1758125739014" duration="20000" />
+      <workItem from="1758125821341" duration="8236000" />
+      <workItem from="1758398420291" duration="229000" />
+      <workItem from="1758398766419" duration="1922000" />
+      <workItem from="1758830915873" duration="2009000" />
+      <workItem from="1758914478163" duration="3582000" />
+      <workItem from="1758963301837" duration="3629000" />
+    </task>
+    <task id="LOCAL-00001" summary="[mongo-service]: add crud operation">
+      <option name="closed" value="true" />
+      <created>1757531149693</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1757531149693</updated>
+    </task>
+    <task id="LOCAL-00002" summary="[mongo-service]: add swagger">
+      <option name="closed" value="true" />
+      <created>1757531329018</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1757531329018</updated>
+    </task>
+    <task id="LOCAL-00003" summary="[mongo-service]: add root pom with dependencies">
+      <option name="closed" value="true" />
+      <created>1757620599789</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1757620599789</updated>
+    </task>
+    <task id="LOCAL-00004" summary="[grpc-client-service]: create grpc client">
+      <option name="closed" value="true" />
+      <created>1757620630483</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1757620630483</updated>
+    </task>
+    <task id="LOCAL-00005" summary="[mongo-service]: fix compatibility dependency">
+      <option name="closed" value="true" />
+      <created>1757621873031</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1757621873031</updated>
+    </task>
+    <task id="LOCAL-00006" summary="[grpc-client]: add client. send request to server with grpc">
+      <option name="closed" value="true" />
+      <created>1757711342938</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1757711342938</updated>
+    </task>
+    <task id="LOCAL-00007" summary="[mongo-db]: populating caffeine cash on product service">
+      <option name="closed" value="true" />
+      <created>1758052134662</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1758052134662</updated>
+    </task>
+    <task id="LOCAL-00008" summary="[mongo-db]: add docker file(without layers); add profile for container; add file README">
+      <option name="closed" value="true" />
+      <created>1758138147787</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1758138147787</updated>
+    </task>
+    <task id="LOCAL-00009" summary="[mongo-db]: drop redundant gradle file">
+      <option name="closed" value="true" />
+      <created>1758963482555</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1758963482555</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="[mongo-service]: add crud operation" />
+    <MESSAGE value="[mongo-service]: add swagger" />
+    <MESSAGE value="[mongo-service]: add root pom with dependencies" />
+    <MESSAGE value="[grpc-client-service]: create grpc client" />
+    <MESSAGE value="[mongo-service]: fix compatibility dependency" />
+    <MESSAGE value="[grpc-client]: add client. send request to server with grpc" />
+    <MESSAGE value="[mongo-db]: populating caffeine cash on product service" />
+    <MESSAGE value="[mongo-db]: add docker file(without layers); add profile for container; add file README" />
+    <MESSAGE value="[mongo-db]: drop redundant gradle file" />
+    <option name="LAST_COMMIT_MESSAGE" value="[mongo-db]: drop redundant gradle file" />
+  </component>
+</project>
