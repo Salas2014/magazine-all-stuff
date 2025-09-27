@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb3c1e04-6164-4f1a-bec2-9b7e44e4032d" name="Changes" comment="[producer-service]: create policy for kv and discovery; add separate token for [producer-service]">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="bb3c1e04-6164-4f1a-bec2-9b7e44e4032d" name="Changes" comment="[mongo-db]: add configuration for discovery consul; generate personal acl token with policy;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongodb/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mongodb/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongodb/src/main/resources/application-standalone.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mongodb/src/main/resources/application-standalone.yaml" afterDir="false" />
@@ -67,6 +66,11 @@
   <component name="HttpClientOnboardingState">{
   &quot;isOnboardingCommentShown&quot;: true
 }</component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupGrunt">
+      <scroll-view-position x="0" y="0" />
+    </layout>
+  </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -272,7 +276,7 @@
       <workItem from="1758830915873" duration="2009000" />
       <workItem from="1758914478163" duration="3582000" />
       <workItem from="1758963301837" duration="5048000" />
-      <workItem from="1758992030495" duration="4896000" />
+      <workItem from="1758992030495" duration="5147000" />
     </task>
     <task id="LOCAL-00001" summary="[mongo-service]: add crud operation">
       <option name="closed" value="true" />
@@ -370,7 +374,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759001551470</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="[mongo-db]: add configuration for discovery consul; generate personal acl token with policy;">
+      <option name="closed" value="true" />
+      <created>1759002930292</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1759002930292</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -400,6 +412,7 @@
     <MESSAGE value="[mongo-db]: drop redundant gradle file; create new module; add consul server into docker compose; add discovery service to producer-service module;" />
     <MESSAGE value="[producer-service]: add external consul config service" />
     <MESSAGE value="[producer-service]: create policy for kv and discovery; add separate token for [producer-service]" />
-    <option name="LAST_COMMIT_MESSAGE" value="[producer-service]: create policy for kv and discovery; add separate token for [producer-service]" />
+    <MESSAGE value="[mongo-db]: add configuration for discovery consul; generate personal acl token with policy;" />
+    <option name="LAST_COMMIT_MESSAGE" value="[mongo-db]: add configuration for discovery consul; generate personal acl token with policy;" />
   </component>
 </project>

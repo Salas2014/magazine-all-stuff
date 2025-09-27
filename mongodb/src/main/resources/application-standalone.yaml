@@ -1,8 +1,8 @@
 spring:
   application:
     name: mongodb-service
-#  config:
-#    import: 'consul:'
+  config:
+    import: 'consul:'
 
   cloud:
     consul:
@@ -12,15 +12,10 @@ spring:
         hostname: host.docker.internal
         instance-id: mongo-db-service
         acl-token: 14e4d5ac-fc1c-f9b5-54d4-4cfc9143ed1d
-
-  data:
-    mongodb:
-      username: salas
-      password: password
-      host: localhost
-      port: 27017
-      database: magazinecoding
-      authentication-database: admin
+      config:
+        acl-token: 14e4d5ac-fc1c-f9b5-54d4-4cfc9143ed1d
+        format: yaml
+        data-key: data #default-value
 
 server:
   port: 8180
