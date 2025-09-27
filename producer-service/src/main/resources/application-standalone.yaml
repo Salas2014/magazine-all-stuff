@@ -11,11 +11,11 @@ spring:
       discovery:
         hostname: host.docker.internal
         instance-id: producer-service
-        acl-token: 45cb0de0-6d6c-6545-477c-08f2e6d529cb
+        acl-token: 85c3fcbb-c529-c1aa-cd00-1e80b5ac9335
       config:
         data-key: data
         format: yaml
-        acl-token: 45cb0de0-6d6c-6545-477c-08f2e6d529cb
+        acl-token: 85c3fcbb-c529-c1aa-cd00-1e80b5ac9335
 
 
 management:

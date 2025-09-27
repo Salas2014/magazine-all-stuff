@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb3c1e04-6164-4f1a-bec2-9b7e44e4032d" name="Changes" comment="[mongo-db]: drop redundant gradle file; create new module; add consul server into docker compose; add discovery service to producer-service module;">
+    <list default="true" id="bb3c1e04-6164-4f1a-bec2-9b7e44e4032d" name="Changes" comment="[producer-service]: add external consul config service">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/producer-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/producer-service/src/main/resources/application-standalone.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/producer-service/src/main/resources/application-standalone.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -164,20 +163,10 @@
     </option>
     <option name="configurationStatuses">
       <map>
-        <entry key="HttpClient.HttpRequestRunConfigurationType">
-          <value>
-            <map>
-              <entry key="rest-api_7 | #1" value="STOPPED" />
-              <entry key="rest-api_7 | #2" value="STOPPED" />
-            </map>
-          </value>
-        </entry>
         <entry key="SpringBootApplicationConfigurationType">
           <value>
             <map>
-              <entry key="GrpcClientApplication" value="STOPPED" />
-              <entry key="MongodbApplication" value="FAILED" />
-              <entry key="ProducerServiceApplication" value="FAILED" />
+              <entry key="ProducerServiceApplication" value="STOPPED" />
             </map>
           </value>
         </entry>
@@ -238,14 +227,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProducerServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <option name="ACTIVE_PROFILES" value="standalone" />
-      <module name="producer-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.salas.producers.ervice.ProducerServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ProductServiceTest.testFindById_CacheHit_ShouldNotCallRepository" />
@@ -288,7 +269,7 @@
       <workItem from="1758830915873" duration="2009000" />
       <workItem from="1758914478163" duration="3582000" />
       <workItem from="1758963301837" duration="5048000" />
-      <workItem from="1758992030495" duration="674000" />
+      <workItem from="1758992030495" duration="3272000" />
     </task>
     <task id="LOCAL-00001" summary="[mongo-service]: add crud operation">
       <option name="closed" value="true" />
@@ -370,7 +351,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758967179705</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="[producer-service]: add external consul config service">
+      <option name="closed" value="true" />
+      <created>1758993050662</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1758993050662</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,6 +387,7 @@
     <MESSAGE value="[mongo-db]: add docker file(without layers); add profile for container; add file README" />
     <MESSAGE value="[mongo-db]: drop redundant gradle file" />
     <MESSAGE value="[mongo-db]: drop redundant gradle file; create new module; add consul server into docker compose; add discovery service to producer-service module;" />
-    <option name="LAST_COMMIT_MESSAGE" value="[mongo-db]: drop redundant gradle file; create new module; add consul server into docker compose; add discovery service to producer-service module;" />
+    <MESSAGE value="[producer-service]: add external consul config service" />
+    <option name="LAST_COMMIT_MESSAGE" value="[producer-service]: add external consul config service" />
   </component>
 </project>
