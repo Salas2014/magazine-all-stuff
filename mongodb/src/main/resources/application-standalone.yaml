@@ -1,6 +1,18 @@
 spring:
   application:
     name: mongodb-service
+#  config:
+#    import: 'consul:'
+
+  cloud:
+    consul:
+      port: 8500
+      host: localhost
+      discovery:
+        hostname: host.docker.internal
+        instance-id: mongo-db-service
+        acl-token: 14e4d5ac-fc1c-f9b5-54d4-4cfc9143ed1d
+
   data:
     mongodb:
       username: salas
@@ -17,3 +29,13 @@ server:
 grpc:
   server:
     port: 9090
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - health
+          - prometheus
+          - metrics
+          - info
