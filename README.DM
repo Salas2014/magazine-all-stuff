@@ -12,3 +12,13 @@ consul
 # Или если нужен именно server режим, создайте папку в temp, и подгрузить конфиг
 mkdir -p /tmp/consul-data
 ./consul agent -server -bind=192.168.0.103 -client=0.0.0.0 -ui -data-dir=/tmp/consul-data -bootstrap
+
+
+
+
+
+консул к grpcService
+мониторинг и трейсинг прекрутить
+кейклок
+кафка
+и расскрутить монго дб и grpc еще!

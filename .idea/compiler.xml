@@ -8,7 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="producer-service" />
       </profile>
-      <profile name="Annotation profile for mongodb" enabled="true">
+      <profile name="Annotation profile for grpc-client" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -22,9 +22,9 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="grpc-client" options="-parameters -parameters" />
-      <module name="mongodb" options="-parameters -parameters" />
-      <module name="producer-service" options="-parameters" />
+      <module name="grpc-client" options="-parameters" />
+      <module name="mongodb" options="-parameters" />
+      <module name="producer-service" options="" />
     </option>
   </component>
 </project>
