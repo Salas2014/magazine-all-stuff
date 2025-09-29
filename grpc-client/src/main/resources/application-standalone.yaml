@@ -1,12 +1,25 @@
 spring:
   application:
     name: grpc-client
-
-server:
-  port: 8181
+  config:
+    import: 'consul:'
+  cloud:
+    consul:
+      discovery:
+        instance-id: grpc-client-service
+        hostname: host.docker.internal
+        acl-token: b93a2fd1-0138-c148-7b3d-db78f5548db5
+      config:
+        format: yaml
+        acl-token: b93a2fd1-0138-c148-7b3d-db78f5548db5
+        data-key: data
 
 grpc:
   client:
     myGrpcService:
       address: localhost:9090
       negotiation-type: plaintext
+
+
+server:
+  port: 8181
