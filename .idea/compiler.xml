@@ -8,7 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="producer-service" />
       </profile>
-      <profile name="Annotation profile for grpc-client" enabled="true">
+      <profile name="Annotation profile for mongodb" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
