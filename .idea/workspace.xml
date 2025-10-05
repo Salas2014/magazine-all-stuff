@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb3c1e04-6164-4f1a-bec2-9b7e44e4032d" name="Changes" comment="[grpc-client]: add consul config and discovery services">
-      <change afterPath="$PROJECT_DIR$/tmp/prometheus/prometheus.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="bb3c1e04-6164-4f1a-bec2-9b7e44e4032d" name="Changes" comment="[infostructure]: add prometheus">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grpc-client/src/main/resources/application-standalone.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/grpc-client/src/main/resources/application-standalone.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -307,7 +304,8 @@
       <workItem from="1759135461801" duration="4233000" />
       <workItem from="1759249935928" duration="16000" />
       <workItem from="1759571383480" duration="380000" />
-      <workItem from="1759571870282" duration="308000" />
+      <workItem from="1759571870282" duration="5372000" />
+      <workItem from="1759683578624" duration="1199000" />
     </task>
     <task id="LOCAL-00001" summary="[mongo-service]: add crud operation">
       <option name="closed" value="true" />
@@ -445,7 +443,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759171505507</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="[infostructure]: add prometheus">
+      <option name="closed" value="true" />
+      <created>1759572330949</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1759572330949</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -480,6 +486,7 @@
     <MESSAGE value="[parent]: add parent pom for resolve dependencies versions" />
     <MESSAGE value="[parent]: add parent default for all dependencies; fix child pom's file" />
     <MESSAGE value="[grpc-client]: add consul config and discovery services" />
-    <option name="LAST_COMMIT_MESSAGE" value="[grpc-client]: add consul config and discovery services" />
+    <MESSAGE value="[infostructure]: add prometheus" />
+    <option name="LAST_COMMIT_MESSAGE" value="[infostructure]: add prometheus" />
   </component>
 </project>

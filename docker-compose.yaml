@@ -58,6 +58,30 @@ services:
       - '9090:9090'
     volumes:
       - ./tmp/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+    networks:
+      - mongo-net
+
+
+  grafana:
+    image: grafana/grafana-oss:latest
+    container_name: grafana-for-home-work
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    depends_on:
+      - prometheus
+    networks:
+      - mongo-net
+    volumes:
+      - ./tmp/grafana-storage:/var/lib/grafana
+    healthcheck:
+      test: [ "CMD", "wget", "--spider", "-q", "http://localhost:3000/api/health" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
 
 
 volumes:
