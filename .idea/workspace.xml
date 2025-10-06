@@ -4,22 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb3c1e04-6164-4f1a-bec2-9b7e44e4032d" name="Changes" comment="[infostructure]: add exporters; connect from grafana to prometheus and configure dashboards">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/data_source_mapping.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer-service/src/main/avro/Event.avsc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+    <list default="true" id="bb3c1e04-6164-4f1a-bec2-9b7e44e4032d" name="Changes" comment="[infostructure]: fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grpc-client/src/test/java/com/salas/grpc/client/GrpcClientApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/producer-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer-service/src/main/java/com/salas/producers/ervice/ProducerServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/producer-service/src/main/java/com/salas/producers/ervice/ProducerServiceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/producer-service/src/main/resources/application-standalone.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/producer-service/src/main/resources/application-standalone.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer-service/src/test/java/com/salas/producers/ervice/ProducerServiceApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/prometheus/prometheus.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/prometheus/prometheus.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,6 +100,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "Docker.docker-compose.yaml.kafka-ui: Compose Deployment.executor": "Run",
     "HTTP Request.rest-api_7 | #1.executor": "Run",
     "HTTP Request.rest-api_7 | #2.executor": "Run",
     "JUnit.ProductServiceTest.executor": "Run",
@@ -211,11 +200,8 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ProducerServiceApplication">
+  <component name="RunManager" selected="Docker.docker-compose.yaml.kafka-ui: Compose Deployment">
     <configuration name="rest-api_7 | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api_7.http" executionIdentifier="#1" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="rest-api_7 | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api_7.http" executionIdentifier="#2" index="2" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="ProductServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -279,13 +265,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yaml.kafka-ui: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="kafka-ui" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.ProducerServiceApplication" />
+        <item itemvalue="Docker.docker-compose.yaml.kafka-ui: Compose Deployment" />
         <item itemvalue="JUnit.ProductServiceTest.testFindById_CacheHit_ShouldNotCallRepository" />
         <item itemvalue="JUnit.ProductServiceTest" />
         <item itemvalue="HTTP Request.rest-api_7 | #1" />
-        <item itemvalue="HTTP Request.rest-api_7 | #2" />
       </list>
     </recent_temporary>
   </component>
@@ -328,7 +331,7 @@
       <workItem from="1759249935928" duration="16000" />
       <workItem from="1759571383480" duration="380000" />
       <workItem from="1759571870282" duration="5372000" />
-      <workItem from="1759683578624" duration="14714000" />
+      <workItem from="1759683578624" duration="16718000" />
     </task>
     <task id="LOCAL-00001" summary="[mongo-service]: add crud operation">
       <option name="closed" value="true" />
@@ -498,7 +501,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759741949123</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="[infostructure]: fix">
+      <option name="closed" value="true" />
+      <created>1759777218146</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1759777218146</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -537,6 +548,7 @@
     <MESSAGE value="[infostructure]: add grafana" />
     <MESSAGE value="[infostructure]: add kafka brokers; add postgres; add exporters" />
     <MESSAGE value="[infostructure]: add exporters; connect from grafana to prometheus and configure dashboards" />
-    <option name="LAST_COMMIT_MESSAGE" value="[infostructure]: add exporters; connect from grafana to prometheus and configure dashboards" />
+    <MESSAGE value="[infostructure]: fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="[infostructure]: fix" />
   </component>
 </project>

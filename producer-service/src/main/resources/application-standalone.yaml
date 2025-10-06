@@ -18,7 +18,7 @@ spring:
         acl-token: 85c3fcbb-c529-c1aa-cd00-1e80b5ac9335
 
   kafka:
-    bootstrap-servers: localhost:9092,localhost:9093,localhost:9094
+    bootstrap-servers: host.docker.internal:9092,host.docker.internal:9093,host.docker.internal:9094
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
