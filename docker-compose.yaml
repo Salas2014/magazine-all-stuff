@@ -106,14 +106,17 @@ services:
     container_name: kafka1
     hostname: kafka1
     ports:
-      - "9092:9092"
+      - "9092:9092"     # внешний доступ
+      - "29092:29092"   # внутренний доступ для других контейнеров
     volumes:
       - kafka1_data:/var/lib/kafka/data
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka1:9092
-      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092,PLAINTEXT_INTERNAL://0.0.0.0:29092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092,PLAINTEXT_INTERNAL://kafka1:29092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_INTERNAL:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT_INTERNAL
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
     healthcheck:
       test: [ "CMD", "kafka-topics", "--bootstrap-server", "localhost:9092", "--list" ]
@@ -132,13 +135,16 @@ services:
     hostname: kafka2
     ports:
       - "9093:9093"
+      - "29093:29093"
     volumes:
       - kafka2_data:/var/lib/kafka/data
     environment:
       KAFKA_BROKER_ID: 2
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka2:9093
-      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9093,PLAINTEXT_INTERNAL://0.0.0.0:29093
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9093,PLAINTEXT_INTERNAL://kafka2:29093
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_INTERNAL:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT_INTERNAL
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
     healthcheck:
       test: [ "CMD", "kafka-topics", "--bootstrap-server", "localhost:9093", "--list" ]
@@ -157,13 +163,16 @@ services:
     hostname: kafka3
     ports:
       - "9094:9094"
+      - "29094:29094"
     volumes:
       - kafka3_data:/var/lib/kafka/data
     environment:
       KAFKA_BROKER_ID: 3
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka3:9094
-      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9094,PLAINTEXT_INTERNAL://0.0.0.0:29094
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9094,PLAINTEXT_INTERNAL://kafka3:29094
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_INTERNAL:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT_INTERNAL
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
     healthcheck:
       test: [ "CMD", "kafka-topics", "--bootstrap-server", "localhost:9094", "--list" ]
@@ -175,6 +184,7 @@ services:
         condition: service_healthy
     networks:
       - observability-net
+
 
   schema-registry:
     image: confluentinc/cp-schema-registry:7.5.0
@@ -287,6 +297,29 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+
+
+#  event-producer:
+#    image: event-producer:latest
+#    container_name: event-producer
+#    ports:
+#      - "8182:8182"
+#    build:
+#      context: .
+#      dockerfile: producer-service/Dockerfile
+#    environment:
+#      SPRING_PROFILES_ACTIVE: standalone
+#    depends_on:
+#      kafka1:
+#        condition: service_healthy
+#      kafka2:
+#        condition: service_healthy
+#      kafka3:
+#        condition: service_healthy
+#      schema-registry:
+#        condition: service_healthy
+#    networks:
+#      - observability-net
 
 
 volumes:
