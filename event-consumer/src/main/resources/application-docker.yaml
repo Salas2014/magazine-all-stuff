@@ -4,11 +4,24 @@ server:
 spring:
   application:
     name: event-consumer
+  config:
+    import: 'consul:'
+
+  cloud:
+    consul:
+      port: 8500
+      host: consul-server-1
+      discovery:
+        hostname: event-consumer
+        instance-id: event-consumer
+        acl-token: e93f1f1c-bd9e-b501-c657-1e27aea1292c
+      config:
+        data-key: data
+        format: yaml
+        acl-token: e93f1f1c-bd9e-b501-c657-1e27aea1292c
 
   datasource:
     url: jdbc:postgresql://postgres:5432/events_db
-    username: user
-    password: password
   jpa:
     hibernate:
       ddl-auto: update

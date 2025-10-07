@@ -9,6 +9,14 @@ group = "net.proselyte"
 version = "$appVersion"
 sourceCompatibility = "21"
 
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:2023.0.3"
+
+    }
+}
+
+
 repositories {
     mavenCentral()
     maven {
@@ -26,6 +34,9 @@ dependencies {
     implementation"org.springframework.kafka:spring-kafka:$springKafkaVersion"
     implementation "io.confluent:kafka-avro-serializer:$kafkaAvroSerializerVersion"
     implementation "org.postgresql:postgresql"
+
+    implementation "org.springframework.cloud:spring-cloud-starter-consul-discovery"
+    implementation "org.springframework.cloud:spring-cloud-starter-consul-config"
 }
 
 avro {
