@@ -321,6 +321,25 @@ services:
 #    networks:
 #      - observability-net
 
+  event-consumer:
+    image: event-consumer:latest
+    container_name: event-consumer
+    ports:
+      - "8191:8191"
+    build:
+      context: ./event-consumer
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    depends_on:
+      postgres:
+        condition: service_healthy
+      schema-registry:
+        condition: service_healthy
+      kafka1:
+        condition: service_healthy
+    networks:
+      - observability-net
+
 
 volumes:
   kafka1_data:
