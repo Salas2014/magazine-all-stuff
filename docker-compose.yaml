@@ -57,7 +57,7 @@ services:
     ports:
       - '9090:9090'
     volumes:
-      - ./tmp/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./monitoring/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
     networks:
       - observability-net
     healthcheck:
@@ -299,27 +299,26 @@ services:
       retries: 5
 
 
-#  event-producer:
-#    image: event-producer:latest
-#    container_name: event-producer
-#    ports:
-#      - "8182:8182"
-#    build:
-#      context: .
-#      dockerfile: producer-service/Dockerfile
-#    environment:
-#      SPRING_PROFILES_ACTIVE: standalone
-#    depends_on:
-#      kafka1:
-#        condition: service_healthy
-#      kafka2:
-#        condition: service_healthy
-#      kafka3:
-#        condition: service_healthy
-#      schema-registry:
-#        condition: service_healthy
-#    networks:
-#      - observability-net
+  event-producer:
+    image: event-producer:latest
+    container_name: event-producer
+    ports:
+      - "8192:8192"
+    build:
+      context: ./event-producer
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    depends_on:
+      kafka1:
+        condition: service_healthy
+      kafka2:
+        condition: service_healthy
+      kafka3:
+        condition: service_healthy
+      schema-registry:
+        condition: service_healthy
+    networks:
+      - observability-net
 
   event-consumer:
     image: event-consumer:latest

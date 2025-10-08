@@ -1,51 +1,47 @@
+#server:
+#  port: 8192
+
 spring:
   config:
     import: 'consul:'
   application:
-    name: producer-service
+    name: event-producer
+
 
   cloud:
     consul:
       port: 8500
-      host: localhost
+      host: consul-server-1
       discovery:
-        hostname: host.docker.internal
-        instance-id: producer-service
-        acl-token: 85c3fcbb-c529-c1aa-cd00-1e80b5ac9335
+        hostname: event-producer
+        instance-id: event-producer
+        acl-token: 381f9819-96a5-0f67-4521-f0fe915f47c3
       config:
         data-key: data
         format: yaml
-        acl-token: 85c3fcbb-c529-c1aa-cd00-1e80b5ac9335
+        acl-token: 381f9819-96a5-0f67-4521-f0fe915f47c3
 
   kafka:
-    bootstrap-servers: host.docker.internal:9092,host.docker.internal:9093,host.docker.internal:9094
+    bootstrap-servers: kafka1:29092,kafka2:29093,kafka3:29094
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
     properties:
-      schema.registry.url: http://host.docker.internal:8081
+      schema.registry.url: http://schema-registry:8081
 event:
   topic: events
   generation:
     interval-ms: 1000  # Интервал генерации событий (1 сообщение в секунду)
 
-
 management:
   endpoints:
     web:
       exposure:
-        include:
-          - health
-          - prometheus
-          - metrics
-          - info
+        include: "*"
+  endpoint:
+    prometheus:
+      access: read_only
   prometheus:
     metrics:
       export:
         enabled: true
-  endpoint:
-    prometheus:
-      enabled: true
-
-server:
-  port: 8192

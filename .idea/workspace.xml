@@ -4,10 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb3c1e04-6164-4f1a-bec2-9b7e44e4032d" name="Changes" comment="[infostructure]: fix">
+    <list default="true" id="bb3c1e04-6164-4f1a-bec2-9b7e44e4032d" name="Changes" comment="[infostructure]: add consul discovery and config; move sensitive data into consul config">
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event-producer/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event-producer/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event-producer/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event-producer/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event-producer/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event-producer/src/main/avro/Event.avsc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event-producer/src/main/java/net/proselyte/eventproducer/EventProducerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event-producer/src/main/resources/application-docker.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monitoring/alloy/config.alloy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/data_source_mapping.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/producer-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/producer-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/producer-service/src/main/resources/application-standalone.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/producer-service/src/main/resources/application-standalone.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/prometheus/prometheus.yml" beforeDir="false" afterPath="$PROJECT_DIR$/monitoring/prometheus/prometheus.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +38,12 @@
     </option>
   </component>
   <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/event-consumer">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/event-producer">
+      <ProjectState />
+    </projectState>
     <projectState path="$PROJECT_DIR$/grpc-client">
       <ProjectState />
     </projectState>
@@ -31,17 +54,44 @@
         <task path="$PROJECT_DIR$/grpc-client">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/event-consumer">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="grpc-client" type="f1a62948:ProjectNode" />
+                <item name="event-consumer" type="f1a62948:ProjectNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="grpc-client" type="f1a62948:ProjectNode" />
+                <item name="event-consumer" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="event-consumer" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="application" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="event-consumer" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="event-consumer" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build setup" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="event-consumer" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="source generation" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -53,10 +103,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Dockerfile" />
+        <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -100,7 +150,20 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "Docker.docker-compose.yaml.event-producer: Compose Deployment.executor": "Run",
     "Docker.docker-compose.yaml.kafka-ui: Compose Deployment.executor": "Run",
+    "Gradle.Build event-consumer.executor": "Run",
+    "Gradle.Build event-producer.executor": "Run",
+    "Gradle.Tests in 'event-consumer'.executor": "Debug",
+    "Gradle.event-consumer [buildDependents].executor": "Run",
+    "Gradle.event-consumer [build].executor": "Run",
+    "Gradle.event-consumer [classes].executor": "Run",
+    "Gradle.event-consumer [clean].executor": "Run",
+    "Gradle.event-consumer [generateAvroJava].executor": "Run",
+    "Gradle.event-consumer [generateAvroProtocol].executor": "Run",
+    "Gradle.event-consumer [generateTestAvroJava].executor": "Run",
+    "Gradle.event-consumer [generateTestAvroProtocol].executor": "Run",
+    "Gradle.event-consumer [resolveMainClassName].executor": "Run",
     "HTTP Request.rest-api_7 | #1.executor": "Run",
     "HTTP Request.rest-api_7 | #2.executor": "Run",
     "JUnit.ProductServiceTest.executor": "Run",
@@ -119,6 +182,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.EventConsumerApplication.executor": "Run",
     "Spring Boot.GrpcClientApplication.executor": "Run",
     "Spring Boot.MongodbApplication.executor": "Run",
     "Spring Boot.ProducerApplication.executor": "Run",
@@ -138,6 +202,7 @@
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gant",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -154,12 +219,14 @@
       <recent name="com.salas.mongodb.dto" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\salas\IdeaProjects\mainProjectBroadScoupe\home-work-project" />
+      <recent name="C:\Users\salas\IdeaProjects\mainProjectBroadScoupe\home-work-project\event-consumer\src\main" />
       <recent name="C:\Users\salas\Desktop\home-work-project\tmp\consul\config" />
       <recent name="C:\Users\salas\Desktop\home-work-project\mongodb\src\main\resources" />
       <recent name="C:\Users\salas\Desktop\home-work-project\grpc-client\src\main\java\com\salas\grpc\client" />
-      <recent name="C:\Users\salas\Desktop\home-work-project\grpc-client\src\main\proto" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\salas\IdeaProjects\mainProjectBroadScoupe\home-work-project\monitoring" />
       <recent name="C:\Users\salas\Desktop\home-work-project" />
       <recent name="C:\Users\salas\Desktop\home-work-project\grpc-client\src\main" />
     </key>
@@ -191,46 +258,115 @@
         <entry key="SpringBootApplicationConfigurationType">
           <value>
             <map>
+              <entry key="EventConsumerApplication" value="FAILED" />
               <entry key="GrpcClientApplication" value="STOPPED" />
               <entry key="MongodbApplication" value="STOPPED" />
-              <entry key="ProducerServiceApplication" value="STOPPED" />
             </map>
           </value>
         </entry>
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yaml.kafka-ui: Compose Deployment">
-    <configuration name="rest-api_7 | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api_7.http" executionIdentifier="#1" runType="Run single request">
+  <component name="RunManager" selected="Docker.docker-compose.yaml.event-producer: Compose Deployment">
+    <configuration name="event-consumer [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/event-consumer" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="ProductServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mongodb" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.salas.mongodb.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.salas.mongodb.service" />
-      <option name="MAIN_CLASS_NAME" value="com.salas.mongodb.service.ProductServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
+    <configuration name="event-consumer [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/event-consumer" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="event-consumer [generateAvroJava]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/event-consumer" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="generateAvroJava" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="event-consumer [generateTestAvroProtocol]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/event-consumer" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="generateTestAvroProtocol" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="EventConsumerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ACTIVE_PROFILES" value="standalone" />
+      <module name="event-consumer.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.salas.event.consumer.EventConsumerApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductServiceTest.testFindById_CacheHit_ShouldNotCallRepository" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mongodb" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.salas.mongodb.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.salas.mongodb.service" />
-      <option name="MAIN_CLASS_NAME" value="com.salas.mongodb.service.ProductServiceTest" />
-      <option name="METHOD_NAME" value="testFindById_CacheHit_ShouldNotCallRepository" />
-      <option name="TEST_OBJECT" value="method" />
+    <configuration name="EventProducerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="event-producer.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="net.proselyte.eventproducer.EventProducerApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -251,30 +387,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProducerServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <option name="ACTIVE_PROFILES" value="standalone" />
-      <module name="producer-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.salas.producers.ervice.ProducerServiceApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.salas.producers.ervice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml" />
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yaml.kafka-ui: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="docker-compose.yaml.event-producer: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="services">
             <list>
-              <option value="kafka-ui" />
+              <option value="event-producer" />
             </list>
           </option>
           <option name="sourceFilePath" value="docker-compose.yaml" />
@@ -284,11 +408,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ProducerServiceApplication" />
-        <item itemvalue="Docker.docker-compose.yaml.kafka-ui: Compose Deployment" />
-        <item itemvalue="JUnit.ProductServiceTest.testFindById_CacheHit_ShouldNotCallRepository" />
-        <item itemvalue="JUnit.ProductServiceTest" />
-        <item itemvalue="HTTP Request.rest-api_7 | #1" />
+        <item itemvalue="Docker.docker-compose.yaml.event-producer: Compose Deployment" />
+        <item itemvalue="Gradle.event-consumer [build]" />
+        <item itemvalue="Gradle.event-consumer [clean]" />
+        <item itemvalue="Gradle.event-consumer [generateAvroJava]" />
+        <item itemvalue="Gradle.event-consumer [generateTestAvroProtocol]" />
       </list>
     </recent_temporary>
   </component>
@@ -331,7 +455,10 @@
       <workItem from="1759249935928" duration="16000" />
       <workItem from="1759571383480" duration="380000" />
       <workItem from="1759571870282" duration="5372000" />
-      <workItem from="1759683578624" duration="16718000" />
+      <workItem from="1759683578624" duration="19980000" />
+      <workItem from="1759864049893" duration="561000" />
+      <workItem from="1759864631962" duration="7705000" />
+      <workItem from="1759947765460" duration="7959000" />
     </task>
     <task id="LOCAL-00001" summary="[mongo-service]: add crud operation">
       <option name="closed" value="true" />
@@ -509,7 +636,47 @@
       <option name="project" value="LOCAL" />
       <updated>1759777218146</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="[infostructure]: fix all problem; add two adv listeners for kafka brokers(internal and external); before this commit add app yaml for producer and push event one per second">
+      <option name="closed" value="true" />
+      <created>1759779436458</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1759779436458</updated>
+    </task>
+    <task id="LOCAL-00024" summary="[infostructure]: add event consumer with docker profile">
+      <option name="closed" value="true" />
+      <created>1759868030925</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1759868030926</updated>
+    </task>
+    <task id="LOCAL-00025" summary="[infostructure]: add event consumer gradle files">
+      <option name="closed" value="true" />
+      <created>1759868073809</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1759868073809</updated>
+    </task>
+    <task id="LOCAL-00026" summary="[infostructure]: add service into docker compose">
+      <option name="closed" value="true" />
+      <created>1759870095523</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1759870095523</updated>
+    </task>
+    <task id="LOCAL-00027" summary="[infostructure]: add consul discovery and config; move sensitive data into consul config">
+      <option name="closed" value="true" />
+      <created>1759873984742</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1759873984742</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -527,8 +694,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[mongo-service]: add crud operation" />
-    <MESSAGE value="[mongo-service]: add swagger" />
     <MESSAGE value="[mongo-service]: add root pom with dependencies" />
     <MESSAGE value="[grpc-client-service]: create grpc client" />
     <MESSAGE value="[mongo-service]: fix compatibility dependency" />
@@ -549,6 +714,30 @@
     <MESSAGE value="[infostructure]: add kafka brokers; add postgres; add exporters" />
     <MESSAGE value="[infostructure]: add exporters; connect from grafana to prometheus and configure dashboards" />
     <MESSAGE value="[infostructure]: fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="[infostructure]: fix" />
+    <MESSAGE value="[infostructure]: fix all problem; add two adv listeners for kafka brokers(internal and external); before this commit add app yaml for producer and push event one per second" />
+    <MESSAGE value="[infostructure]: add event consumer with docker profile" />
+    <MESSAGE value="[infostructure]: add event consumer gradle files" />
+    <MESSAGE value="[infostructure]: add service into docker compose" />
+    <MESSAGE value="[infostructure]: add consul discovery and config; move sensitive data into consul config" />
+    <option name="LAST_COMMIT_MESSAGE" value="[infostructure]: add consul discovery and config; move sensitive data into consul config" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/event-consumer/src/main/java/com/salas/event/consumer/config/KafkaConsumerConfig.java</url>
+          <line>20</line>
+          <properties class="com.salas.event.consumer.config.KafkaConsumerConfig" method="consumerFactory">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
