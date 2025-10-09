@@ -336,6 +336,8 @@ services:
         condition: service_healthy
       kafka1:
         condition: service_healthy
+      event-producer:
+        condition: service_started
     networks:
       - observability-net
 

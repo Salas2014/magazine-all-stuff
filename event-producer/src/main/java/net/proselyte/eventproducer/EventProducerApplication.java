@@ -1,6 +1,6 @@
 package net.proselyte.eventproducer;
 
-import net.proselyte.avro.Event;
+import net.salas.avro.Event;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;

@@ -1,7 +1,7 @@
 {
   "type": "record",
   "name": "Event",
-  "namespace": "net.proselyte.avro",
+  "namespace": "net.salas.avro",
   "fields": [
     { "name": "uid", "type": "string" },
     { "name": "subject", "type": "string" },
