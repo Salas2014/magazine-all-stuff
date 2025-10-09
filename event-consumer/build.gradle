@@ -35,6 +35,9 @@ dependencies {
     implementation "io.confluent:kafka-avro-serializer:$kafkaAvroSerializerVersion"
     implementation "org.postgresql:postgresql"
 
+    implementation "net.logstash.logback:logstash-logback-encoder:$logstashVersion"
+
+
     implementation "org.springframework.cloud:spring-cloud-starter-consul-discovery"
     implementation "org.springframework.cloud:spring-cloud-starter-consul-config"
 }
