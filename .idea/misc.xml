@@ -4,6 +4,7 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/event-consumer" />
     <file type="web" url="file://$PROJECT_DIR$/event-producer" />
+    <file type="web" url="file://$PROJECT_DIR$/event-public-api" />
     <file type="web" url="file://$PROJECT_DIR$/grpc-client" />
   </component>
   <component name="MavenProjectsManager">

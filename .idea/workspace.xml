@@ -4,17 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb3c1e04-6164-4f1a-bec2-9b7e44e4032d" name="Changes" comment="[infostructure]: add error handling into consumer; make the same package for avro message">
-      <change afterPath="$PROJECT_DIR$/event-consumer/src/main/resources/logback-spring.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event-producer/src/main/resources/logback-spring.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/monitoring/loki/loki-config.yaml" afterDir="false" />
+    <list default="true" id="bb3c1e04-6164-4f1a-bec2-9b7e44e4032d" name="Changes" comment="[infostructure]: add new service">
+      <change afterPath="$PROJECT_DIR$/event-consumer/src/main/java/com/salas/event/consumer/rest/EventInternalRestControllerV1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event-consumer/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/event-consumer/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event-consumer/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/event-consumer/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event-consumer/src/main/java/com/salas/event/consumer/listener/EventListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-consumer/src/main/java/com/salas/event/consumer/listener/EventListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event-producer/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/event-producer/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monitoring/alloy/config.alloy" beforeDir="false" afterPath="$PROJECT_DIR$/monitoring/alloy/config.alloy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-consumer/src/main/java/com/salas/event/consumer/module/EventEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-consumer/src/main/java/com/salas/event/consumer/module/EventEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-consumer/src/main/java/com/salas/event/consumer/repository/EventRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-consumer/src/main/java/com/salas/event/consumer/repository/EventRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-producer/src/main/resources/application-docker.yml" beforeDir="false" afterPath="$PROJECT_DIR$/event-producer/src/main/resources/application-docker.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-public-api/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/event-public-api/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-public-api/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/event-public-api/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-public-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/event-public-api/src/main/resources/application-docker.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monitoring/prometheus/prometheus.yml" beforeDir="false" afterPath="$PROJECT_DIR$/monitoring/prometheus/prometheus.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +37,9 @@
     <projectState path="$PROJECT_DIR$/event-producer">
       <ProjectState />
     </projectState>
+    <projectState path="$PROJECT_DIR$/event-public-api">
+      <ProjectState />
+    </projectState>
     <projectState path="$PROJECT_DIR$/grpc-client">
       <ProjectState />
     </projectState>
@@ -50,12 +56,30 @@
         <task path="$PROJECT_DIR$/event-producer">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/event-public-api">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="event-consumer" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="event-public-api" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="event-public-api" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="event-public-api" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -69,8 +93,8 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="Dockerfile" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -130,6 +154,8 @@
     "Gradle.event-consumer [resolveMainClassName].executor": "Run",
     "Gradle.event-producer [build].executor": "Run",
     "Gradle.event-producer [clean].executor": "Run",
+    "Gradle.event-public-api [build].executor": "Run",
+    "Gradle.event-public-api [clean].executor": "Run",
     "HTTP Request.rest-api_7 | #1.executor": "Run",
     "HTTP Request.rest-api_7 | #2.executor": "Run",
     "JUnit.ProductServiceTest.executor": "Run",
@@ -192,6 +218,7 @@
       <recent name="C:\Users\salas\Desktop\home-work-project\mongodb\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\salas\IdeaProjects\mainProjectBroadScoupe\home-work-project" />
       <recent name="C:\Users\salas\IdeaProjects\mainProjectBroadScoupe\home-work-project\monitoring" />
       <recent name="C:\Users\salas\Desktop\home-work-project" />
       <recent name="C:\Users\salas\Desktop\home-work-project\grpc-client\src\main" />
@@ -233,7 +260,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.event-consumer [build]">
+  <component name="RunManager" selected="Gradle.event-public-api [build]">
     <configuration name="event-consumer [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -278,28 +305,6 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="event-consumer [generateAvroJava]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/event-consumer" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="generateAvroJava" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
     <configuration name="event-producer [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -322,10 +327,32 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="event-producer [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="event-public-api [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/event-producer" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/event-public-api" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="event-public-api [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/event-public-api" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
         <option name="taskDescriptions">
@@ -375,6 +402,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PublicApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="event-public-api.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="net.proselyte.publicapi.PublicApiApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
         <settings />
@@ -383,11 +417,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.event-public-api [build]" />
+        <item itemvalue="Gradle.event-public-api [clean]" />
         <item itemvalue="Gradle.event-consumer [build]" />
         <item itemvalue="Gradle.event-consumer [clean]" />
         <item itemvalue="Gradle.event-producer [build]" />
-        <item itemvalue="Gradle.event-producer [clean]" />
-        <item itemvalue="Gradle.event-consumer [generateAvroJava]" />
       </list>
     </recent_temporary>
   </component>
@@ -435,7 +469,10 @@
       <workItem from="1759864631962" duration="7705000" />
       <workItem from="1759947765460" duration="10319000" />
       <workItem from="1760026436283" duration="285000" />
-      <workItem from="1760026748725" duration="4828000" />
+      <workItem from="1760026748725" duration="6607000" />
+      <workItem from="1760116879397" duration="2489000" />
+      <workItem from="1760169876200" duration="554000" />
+      <workItem from="1760186339783" duration="3950000" />
     </task>
     <task id="LOCAL-00001" summary="[mongo-service]: add crud operation">
       <option name="closed" value="true" />
@@ -669,7 +706,23 @@
       <option name="project" value="LOCAL" />
       <updated>1760029568267</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="[infostructure]: add logstash; add alloy agent and lodi datasource;">
+      <option name="closed" value="true" />
+      <created>1760035007988</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1760035007988</updated>
+    </task>
+    <task id="LOCAL-00031" summary="[infostructure]: add new service">
+      <option name="closed" value="true" />
+      <created>1760119191547</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1760119191547</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -687,8 +740,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[mongo-service]: fix compatibility dependency" />
-    <MESSAGE value="[grpc-client]: add client. send request to server with grpc" />
     <MESSAGE value="[mongo-db]: populating caffeine cash on product service" />
     <MESSAGE value="[mongo-db]: add docker file(without layers); add profile for container; add file README" />
     <MESSAGE value="[mongo-db]: drop redundant gradle file" />
@@ -712,7 +763,9 @@
     <MESSAGE value="[infostructure]: add consul discovery and config; move sensitive data into consul config" />
     <MESSAGE value="[infostructure]: add event-producer; all infra into docker compose; add alloy config" />
     <MESSAGE value="[infostructure]: add error handling into consumer; make the same package for avro message" />
-    <option name="LAST_COMMIT_MESSAGE" value="[infostructure]: add error handling into consumer; make the same package for avro message" />
+    <MESSAGE value="[infostructure]: add logstash; add alloy agent and lodi datasource;" />
+    <MESSAGE value="[infostructure]: add new service" />
+    <option name="LAST_COMMIT_MESSAGE" value="[infostructure]: add new service" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

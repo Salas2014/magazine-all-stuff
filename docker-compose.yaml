@@ -1,4 +1,3 @@
-version: '3.8'
 
 services:
   mongodb:
@@ -340,6 +339,12 @@ services:
         condition: service_started
     networks:
       - observability-net
+    healthcheck:
+      test: [ "CMD", "wget", "--spider", "-q", "http://localhost:8191/actuator/health" ]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
 
   loki:
     image: grafana/loki:2.9.2
@@ -374,6 +379,23 @@ services:
       - --server.http.listen-addr=0.0.0.0:9080
       - --storage.path=/var/lib/alloy/data
       - /etc/alloy/config.alloy
+    networks:
+      - observability-net
+
+
+  event-public-api:
+    image: event-public-api:latest
+    container_name: event-public-api
+    ports:
+      - "8193:8193"
+    build:
+      context: ./event-public-api
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+      EVENT_CONSUMER_URL: http://event-consumer:8191
+    depends_on:
+      event-consumer:
+        condition: service_healthy
     networks:
       - observability-net
 
