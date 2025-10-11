@@ -1,0 +1,40 @@
+#server:
+#  port: 8193
+
+spring:
+  application:
+    name: event-public-api
+  config:
+    import: 'consul:'
+
+  cloud:
+    consul:
+      port: 8500
+      host: consul-server-1
+      discovery:
+        hostname: event-public-api
+        instance-id: event-public-api
+        acl-token: 65820c93-91aa-835e-f111-5992a34b90d2
+      config:
+        data-key: data
+        format: yaml
+        acl-token: 65820c93-91aa-835e-f111-5992a34b90d2
+
+management:
+  server:
+    port: 8193
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    prometheus:
+      access: read_only
+  prometheus:
+    metrics:
+      export:
+        enabled: true
+
+
+event-consumer:
+  url: http://event-consumer:8091
