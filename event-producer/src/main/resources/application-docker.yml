@@ -1,5 +1,5 @@
-#server:
-#  port: 8192
+server:
+  port: 8192
 
 spring:
   config:
@@ -45,3 +45,10 @@ management:
     metrics:
       export:
         enabled: true
+#  tracing:
+#    enabled: true
+#    sampling:
+#      probability: 1.0
+#    otlp:
+#      endpoint: http://alloy:4318
+#      protocol: http/protobuf

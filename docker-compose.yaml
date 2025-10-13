@@ -306,7 +306,12 @@ services:
     build:
       context: ./event-producer
     environment:
+      OTEL_LOGS_EXPORTER: otlp
       SPRING_PROFILES_ACTIVE: docker
+      OTEL_TRACES_EXPORTER: otlp
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://alloy:4318
+      OTEL_EXPORTER_OTLP_PROTOCOL: http/protobuf
+      OTEL_TRACES_SAMPLER: parentbased_always_on
     depends_on:
       kafka1:
         condition: service_healthy
@@ -328,6 +333,11 @@ services:
       context: ./event-consumer
     environment:
       SPRING_PROFILES_ACTIVE: docker
+      OTEL_LOGS_EXPORTER: otlp
+      OTEL_TRACES_EXPORTER: otlp
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://alloy:4318
+      OTEL_EXPORTER_OTLP_PROTOCOL: http/protobuf
+      OTEL_TRACES_SAMPLER: parentbased_always_on
     depends_on:
       postgres:
         condition: service_healthy
@@ -393,9 +403,26 @@ services:
     environment:
       SPRING_PROFILES_ACTIVE: docker
       EVENT_CONSUMER_URL: http://event-consumer:8191
+      OTEL_LOGS_EXPORTER: otlp
+      OTEL_TRACES_EXPORTER: otlp
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://alloy:4318
+      OTEL_EXPORTER_OTLP_PROTOCOL: http/protobuf
+      OTEL_TRACES_SAMPLER: parentbased_always_on
     depends_on:
       event-consumer:
         condition: service_healthy
+    networks:
+      - observability-net
+
+  tempo:
+    image: grafana/tempo:2.4.1
+    container_name: tempo
+    command: [ "-config.file=/etc/tempo/tempo.yaml" ]
+    volumes:
+      - ./monitoring/tempo/tempo.yaml:/etc/tempo/tempo.yaml
+      - tempo_data:/var/tempo
+    ports:
+      - "3200:3200"
     networks:
       - observability-net
 
@@ -411,6 +438,7 @@ volumes:
   loki_chunks:
   loki_index:
   loki_rules:
+  tempo_data:
 
 networks:
   observability-net:

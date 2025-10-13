@@ -4,20 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb3c1e04-6164-4f1a-bec2-9b7e44e4032d" name="Changes" comment="[infostructure]: add new service">
-      <change afterPath="$PROJECT_DIR$/event-consumer/src/main/java/com/salas/event/consumer/rest/EventInternalRestControllerV1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="bb3c1e04-6164-4f1a-bec2-9b7e44e4032d" name="Changes" comment="[infostructure]: add otpl dependencies; add tempo; configure">
+      <change afterPath="$PROJECT_DIR$/event-public-api/src/main/java/net/proselyte/publicapi/filter/TraceIdResponseBodyAdvice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event-public-api/src/main/java/net/proselyte/publicapi/filter/TraceIdToMdcFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monitoring/tempo/tempo.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event-consumer/src/main/java/com/salas/event/consumer/module/EventEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-consumer/src/main/java/com/salas/event/consumer/module/EventEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event-consumer/src/main/java/com/salas/event/consumer/repository/EventRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-consumer/src/main/java/com/salas/event/consumer/repository/EventRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-consumer/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/event-consumer/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-consumer/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/event-consumer/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-consumer/src/main/resources/application-docker.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/event-consumer/src/main/resources/application-docker.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-producer/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/event-producer/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/event-producer/src/main/resources/application-docker.yml" beforeDir="false" afterPath="$PROJECT_DIR$/event-producer/src/main/resources/application-docker.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-public-api/.gradle/8.14/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/event-public-api/.gradle/8.14/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-public-api/.gradle/8.14/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/event-public-api/.gradle/8.14/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-public-api/.gradle/8.14/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/event-public-api/.gradle/8.14/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-public-api/.gradle/8.14/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/event-public-api/.gradle/8.14/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/event-public-api/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/event-public-api/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event-public-api/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/event-public-api/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event-public-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/event-public-api/src/main/resources/application-docker.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monitoring/prometheus/prometheus.yml" beforeDir="false" afterPath="$PROJECT_DIR$/monitoring/prometheus/prometheus.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-public-api/src/main/resources/application-docker.yml" beforeDir="false" afterPath="$PROJECT_DIR$/event-public-api/src/main/resources/application-docker.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monitoring/alloy/config.alloy" beforeDir="false" afterPath="$PROJECT_DIR$/monitoring/alloy/config.alloy" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,74 +139,74 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "Docker.docker-compose.yaml.event-producer: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yaml.kafka-ui: Compose Deployment.executor": "Run",
-    "Gradle.Build event-consumer.executor": "Run",
-    "Gradle.Build event-producer.executor": "Run",
-    "Gradle.Tests in 'event-consumer'.executor": "Debug",
-    "Gradle.event-consumer [buildDependents].executor": "Run",
-    "Gradle.event-consumer [build].executor": "Run",
-    "Gradle.event-consumer [classes].executor": "Run",
-    "Gradle.event-consumer [clean].executor": "Run",
-    "Gradle.event-consumer [generateAvroJava].executor": "Run",
-    "Gradle.event-consumer [generateAvroProtocol].executor": "Run",
-    "Gradle.event-consumer [generateTestAvroJava].executor": "Run",
-    "Gradle.event-consumer [generateTestAvroProtocol].executor": "Run",
-    "Gradle.event-consumer [resolveMainClassName].executor": "Run",
-    "Gradle.event-producer [build].executor": "Run",
-    "Gradle.event-producer [clean].executor": "Run",
-    "Gradle.event-public-api [build].executor": "Run",
-    "Gradle.event-public-api [clean].executor": "Run",
-    "HTTP Request.rest-api_7 | #1.executor": "Run",
-    "HTTP Request.rest-api_7 | #2.executor": "Run",
-    "JUnit.ProductServiceTest.executor": "Run",
-    "JUnit.ProductServiceTest.testFindById_CacheHit_ShouldNotCallRepository.executor": "Run",
-    "Maven.grpc-client [clean].executor": "Run",
-    "Maven.grpc-client [compile].executor": "Run",
-    "Maven.grpc-client [install].executor": "Run",
-    "Maven.mongodb [clean].executor": "Run",
-    "Maven.mongodb [compile].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.EventConsumerApplication.executor": "Run",
-    "Spring Boot.GrpcClientApplication.executor": "Run",
-    "Spring Boot.MongodbApplication.executor": "Run",
-    "Spring Boot.ProducerApplication.executor": "Run",
-    "Spring Boot.ProducerServiceApplication.executor": "Run",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/salas/IdeaProjects/mainProjectBroadScoupe/home-work-project/event-consumer/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gant",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;Docker.docker-compose.yaml.event-producer: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yaml.kafka-ui: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build event-consumer.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build event-producer.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Tests in 'event-consumer'.executor&quot;: &quot;Debug&quot;,
+    &quot;Gradle.event-consumer [buildDependents].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.event-consumer [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.event-consumer [classes].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.event-consumer [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.event-consumer [generateAvroJava].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.event-consumer [generateAvroProtocol].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.event-consumer [generateTestAvroJava].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.event-consumer [generateTestAvroProtocol].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.event-consumer [resolveMainClassName].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.event-producer [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.event-producer [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.event-public-api [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.event-public-api [clean].executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.rest-api_7 | #1.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.rest-api_7 | #2.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductServiceTest.testFindById_CacheHit_ShouldNotCallRepository.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.grpc-client [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.grpc-client [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.grpc-client [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.mongodb [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.mongodb [compile].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.EventConsumerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.GrpcClientApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.MongodbApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ProducerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ProducerServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/salas/IdeaProjects/mainProjectBroadScoupe/home-work-project/event-consumer/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gant&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -472,7 +476,9 @@
       <workItem from="1760026748725" duration="6607000" />
       <workItem from="1760116879397" duration="2489000" />
       <workItem from="1760169876200" duration="554000" />
-      <workItem from="1760186339783" duration="3950000" />
+      <workItem from="1760186339783" duration="4081000" />
+      <workItem from="1760190574681" duration="41000" />
+      <workItem from="1760373599922" duration="7456000" />
     </task>
     <task id="LOCAL-00001" summary="[mongo-service]: add crud operation">
       <option name="closed" value="true" />
@@ -722,7 +728,31 @@
       <option name="project" value="LOCAL" />
       <updated>1760119191547</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="[infostructure]: refactor event consumer">
+      <option name="closed" value="true" />
+      <created>1760190346001</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1760190346001</updated>
+    </task>
+    <task id="LOCAL-00033" summary="[infostructure]: add consul discovery and client; fix config">
+      <option name="closed" value="true" />
+      <created>1760190377885</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1760190377885</updated>
+    </task>
+    <task id="LOCAL-00034" summary="[infostructure]: add event-public-api service into docker compose file">
+      <option name="closed" value="true" />
+      <created>1760190401774</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1760190401774</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -740,10 +770,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[mongo-db]: populating caffeine cash on product service" />
-    <MESSAGE value="[mongo-db]: add docker file(without layers); add profile for container; add file README" />
-    <MESSAGE value="[mongo-db]: drop redundant gradle file" />
-    <MESSAGE value="[mongo-db]: drop redundant gradle file; create new module; add consul server into docker compose; add discovery service to producer-service module;" />
     <MESSAGE value="[producer-service]: add external consul config service" />
     <MESSAGE value="[producer-service]: create policy for kv and discovery; add separate token for [producer-service]" />
     <MESSAGE value="[mongo-db]: add configuration for discovery consul; generate personal acl token with policy;" />
@@ -765,7 +791,11 @@
     <MESSAGE value="[infostructure]: add error handling into consumer; make the same package for avro message" />
     <MESSAGE value="[infostructure]: add logstash; add alloy agent and lodi datasource;" />
     <MESSAGE value="[infostructure]: add new service" />
-    <option name="LAST_COMMIT_MESSAGE" value="[infostructure]: add new service" />
+    <MESSAGE value="[infostructure]: refactor event consumer" />
+    <MESSAGE value="[infostructure]: add consul discovery and client; fix config" />
+    <MESSAGE value="[infostructure]: add event-public-api service into docker compose file" />
+    <MESSAGE value="[infostructure]: add otpl dependencies; add tempo; configure" />
+    <option name="LAST_COMMIT_MESSAGE" value="[infostructure]: add otpl dependencies; add tempo; configure" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

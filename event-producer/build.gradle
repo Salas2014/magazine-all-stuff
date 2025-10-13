@@ -39,6 +39,12 @@ dependencies {
 
     implementation "org.springframework.cloud:spring-cloud-starter-consul-discovery"
     implementation "org.springframework.cloud:spring-cloud-starter-consul-config"
+
+    implementation "io.opentelemetry:opentelemetry-exporter-otlp"
+    implementation("io.opentelemetry.instrumentation:opentelemetry-spring-boot-starter:$opentelemetrySpringBootVersion") {
+        exclude group: "io.opentelemetry", module: "opentelemetry-api-incubator"
+    }
+
 }
 
 avro {
