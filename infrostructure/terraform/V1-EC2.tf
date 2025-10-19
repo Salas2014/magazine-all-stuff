@@ -11,7 +11,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "demo-server" {
-  ami = "ami-0341d95f75f311023"
+  ami = "ami-0360c520857e3138f"
   instance_type = "t2.micro"
   key_name = "keyPairDemo"
   vpc_security_group_ids = [aws_security_group.demo-sg.id]
